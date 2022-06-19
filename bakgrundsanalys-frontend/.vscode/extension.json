@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "sonarsource.sonarlint-vscode",
+    "eamodio.gitlens",
+    "flowtype.flow-for-vscode",
+    "editorconfig.editorconfig"
+  ]
+}

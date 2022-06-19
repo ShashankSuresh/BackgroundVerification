@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("#{$fonts-path}/icomoon.eot?fe90c1");
+  src: url("#{$fonts-path}/icomoon.eot?fe90c1#iefix")
+      format("embedded-opentype"),
+    url("#{$fonts-path}/icomoon.ttf?fe90c1") format("truetype"),
+    url("#{$fonts-path}/icomoon.woff?fe90c1") format("woff"),
+    url("#{$fonts-path}/icomoon.svg?fe90c1#icomoon") format("svg");
+  font-style: normal;
+  font-display: block;
+}
+
+$icons: (
+  twitter: "\e91b",
+  calendar: "\e900",
+  pen: "\e901",
+  copy: "\e902",
+  filter: "\e903",
+  linkedin: "\e904",
+  ellipse: "\e905",
+  loading: "\e906",
+  sign: "\e934",
+  chevronup: "\e909",
+  chevrondown: "\e90a",
+  facebook: "\e90e",
+  arrowright: "\e90b",
+  arrowleft: "\e90c",
+  backarrow: "\e90d",
+  qrcode: "\e90f",
+  download: "\e910",
+  pin: "\e912",
+  planet: "\e913",
+  plus: "\e914",
+  restart: "\e915",
+  rubber: "\e916",
+  search: "\e917",
+  send: "\e918",
+  avatar: "\e919",
+  headerarrowright: "\e91c",
+  hideeye: "\e907",
+  showeye: "\e908",
+  tickmark: "\ea10",
+  info: "\e91a",
+  hamburger: "\e911",
+  mark: "\e91d",
+  email: "\e937",
+  call: "\e91e",
+  shield: "\e924",
+  head: "\e92e",
+);
+
+@mixin icons-list($map) {
+  @each $icon-name, $icon in $map {
+    @if not map-has-key($map, $icon-name) {
+      @warn "'#{$icon-name}' is not a valid icon name";
+    } @else {
+      &-#{$icon-name}::before {
+        content: $icon;
+      }
+    }
+  }
+}
+
+.icon {
+  @include icons-list($icons);
+}
+
+[class^="icon-"] {
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class*="icon-"] {
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.rounded {
+  padding: 0.5em;
+  border-radius: 50%;
+  background-color: $blue-dark;
+  border: solid $blue-dark;
+  text-align: center;
+  &::before {
+    color: $white;
+  }
+}
+
+.invert-rounded {
+  background-color: $white !important;
+  padding: 0.2em;
+  &::before {
+    color: $blue-dark !important;
+  }
+}

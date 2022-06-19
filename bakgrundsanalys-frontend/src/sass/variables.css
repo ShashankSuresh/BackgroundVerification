@@ -1,0 +1,59 @@
+:root {
+  /* Colors */
+  --white: #ffffff;
+  --yellow: #e89e28;
+  --yellow-light: #fcf1df;
+  --yellow-dark: #ffe100;
+  --blue-dark: #223c77;
+  --blue-medium: #3053a4;
+  --blue-logo: #7c97d3;
+  --turquoise: #5da8b2;
+  --turquoise-light: #e9f1f3;
+  --grey: #5d5d5d;
+  --grey-light: #ebebeb;
+  --grey-lightest: #dee2eb;
+  --grey-dark: #12120d;
+  --red: #ebebeb;
+  --grey-lightest-rgba: 235, 235, 235;
+  --red-dark: #f44336;
+  --grey-light-rgba: 222, 226, 235;
+  --red: #e06a6f;
+  --green-dark: #00b050;
+
+  /* Font Weight */
+  --light-weight: 300;
+  --medium-weight: 500;
+  --semibold-weight: 600;
+
+  /* font sizes */
+  --fs-h1: 35px;
+  --fs-h1-m: 26px;
+  --fs-h2: 26px;
+  --fs-h3: 20px;
+  --fs-h4: 18px;
+  --fs-h5: 14px;
+  --fs-link: 18px;
+  --fs-link-m: 16px;
+  --fs-text: 18px;
+  --fs-text-m: 16px;
+  --fs-text-secondary: 16px;
+  --fs-text-not-found: 144px;
+  --fs-icon: 13px;
+  --fs-icon-s: 10px;
+  --fs-icon-number: 42px;
+  --fs-h2-l: 32px;
+
+  /** line heights */
+  --lh-h1: 48px;
+  --lh-h1-m: 35px;
+  --lh-h2: 35px;
+  --lh-h3: 27px;
+  --lh-h4: 25px;
+  --lh-h5: 19px;
+  --lh-link: 24px;
+  --lh-link-m: 22px;
+  --lh-text: 27px;
+  --lh-text-m: 21px;
+  --lh-text-secondary: 21px;
+  --lh-icon: 57px;
+}

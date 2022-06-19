@@ -1,0 +1,29 @@
+/* Button Styles Start */
+.p-button {
+  box-shadow: none !important;
+  &.p-button-link {
+    color: $blue-dark;
+  }
+  &:not(a):not(.p-disabled):hover {
+    background-color: $blue-medium;
+    border-color: $blue-medium;
+  }
+  .p-button-icon-left {
+    margin-right: 5px;
+  }
+  &.icon-style {
+    padding: 7px 15px 7px 20px;
+  }
+}
+.p-button {
+  &.icon {
+    &:hover {
+      span {
+        &::before {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+/* Button Styles End */

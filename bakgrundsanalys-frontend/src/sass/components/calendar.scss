@@ -1,0 +1,190 @@
+/* Calendar Styles Start */
+@import "../variables";
+
+.p-calendar {
+  &.p-calendar-w-btn {
+    border: 1px solid var(--turquoise);
+    background: var(--white);
+    border-radius: 10px;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s,
+      box-shadow 0.2s, background-size 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+
+    .p-inputtext {
+      background-image: none;
+      background-color: transparent;
+      border: 0 none;
+
+      &:enabled:focus {
+        box-shadow: none;
+      }
+    }
+
+    .p-datepicker-trigger.p-button {
+      background: transparent;
+      color: var(--turquoise);
+      border: 0 none;
+
+      &:enabled {
+        &:hover {
+          background: transparent;
+          color: var(--turquoise);
+        }
+
+        &:active {
+          color: var(--turquoise);
+          background: var(--white);
+        }
+      }
+
+      &:focus {
+        color: var(--turquoise);
+        background: var(--white);
+      }
+    }
+  }
+}
+
+.p-datepicker {
+  .p-datepicker-header {
+    border-bottom: 0 none;
+
+    .p-datepicker-title {
+      margin: 0 auto 0 0;
+      order: 1;
+    }
+
+    .p-datepicker-prev {
+      order: 2;
+    }
+
+    .p-datepicker-next {
+      order: 3;
+    }
+  }
+
+  table {
+    th {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    td.p-datepicker-today.p-highlight {
+      box-shadow: 0 0 0 1px rgba(63, 81, 181, 0.12);
+    }
+  }
+
+  .p-input-filled {
+    .p-calendar-w-btn {
+      .p-inputtext {
+        background-image: none;
+        background: transparent;
+      }
+
+      &:not(.p-disabled) {
+        &:hover {
+          background-color: var(--grey-dark);
+          opacity: 0.3;
+          border-color: transparent;
+          background-image: linear-gradient(
+              to bottom,
+              var(--blue-dark),
+              var(--blue-dark)
+            ),
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.87));
+        }
+
+        &.p-focus,
+        &.p-inputwrapper-focus {
+          box-shadow: none;
+          background-color: var(--grey-dark);
+          border-color: transparent;
+          background-size: 100% 2px, 100% 1px;
+        }
+      }
+
+      .p-inputtext {
+        &:enabled {
+          &:hover,
+          &:focus {
+            background-image: none;
+            background: transparent;
+          }
+        }
+        border: 0 none;
+      }
+    }
+
+    .p-calendar.p-invalid .p-inputtext:enabled:focus {
+      box-shadow: none;
+      border-color: transparent;
+    }
+  }
+
+  .p-datepicker-header {
+    .p-datepicker-title {
+      color: var(--grey-dark);
+      padding-left: 10px;
+    }
+
+    .p-datepicker-prev span.p-datepicker-prev-icon.pi.pi-chevron-left,
+    .p-datepicker-next span.p-datepicker-next-icon.pi.pi-chevron-right {
+      color: var(--blue-dark);
+    }
+
+    .p-datepicker-prev:enabled:hover,
+    .p-datepicker-next:enabled:hover {
+      background: transparent;
+    }
+  }
+
+  &:not(.p-disabled) table td span:not(.p-highlight):not(.p-disabled):hover {
+    background-color: var(--yellow);
+  }
+
+  .p-datepicker-calendar-container .p-datepicker-calendar thead {
+    background-color: rgba(var(--grey-lightest-rgba), 0.5);
+
+    th {
+      font-weight: var(--medium-weight);
+      color: var(--grey-dark) !important;
+    }
+  }
+
+  .p-datepicker-today {
+    background: var(--yellow);
+    border-radius: 10px;
+  }
+
+  table td {
+    &.p-datepicker-today > span {
+      background: var(--yellow);
+    }
+
+    color: var(--grey-dark);
+    font-weight: var(--medium-weight);
+  }
+
+  &:not(.p-disabled)
+    table
+    td:not(.p-datepicker-today)
+    span:not(.p-highlight):not(.p-disabled):hover {
+    background-color: var(--white);
+  }
+
+  table td {
+    > span {
+      &.p-highlight {
+        color: var(--blue-dark);
+        background: var(--white);
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    &.p-datepicker-today > span.p-highlight {
+      background: var(--yellow);
+    }
+  }
+}
+/* Calendar Styles End */

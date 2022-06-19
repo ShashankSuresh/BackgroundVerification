@@ -1,0 +1,6 @@
+projectKey=bakgrunds-analys-frontend
+serverUrl=http://sonarqube.splitchennai.com
+serverVersion=8.3.1.34397
+dashboardUrl=http://sonarqube.splitchennai.com/dashboard?id=bakgrunds-analys-frontend
+ceTaskId=AXqqLJJkprnqyz2FXeow
+ceTaskUrl=http://sonarqube.splitchennai.com/api/ce/task?id=AXqqLJJkprnqyz2FXeow
